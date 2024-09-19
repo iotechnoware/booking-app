@@ -259,9 +259,9 @@ class _addbagsState extends State<addbags> {
                                           height: 10,
                                           width: 10,
                                           child: _selectednobag == true
-                                              ? Image.asset('assets/x-circle.png',
+                                              ? Image.asset('assets/old_images/x-circle.png',
                                                   color: Colors.blue.shade900)
-                                              : Image.asset('assets/x-circle.png',
+                                              : Image.asset('assets/old_images/x-circle.png',
                                                   color: Colors.grey)),
                                     ),
                                   ),
@@ -270,9 +270,9 @@ class _addbagsState extends State<addbags> {
                                         height: 21,
                                         width: 21,
                                         child: _selectednobag == true
-                                            ? Image.asset('assets/addbags.png',
+                                            ? Image.asset('assets/old_images/addbags.png',
                                                 color: Colors.blue.shade900)
-                                            : Image.asset('assets/addbags.png',
+                                            : Image.asset('assets/old_images/addbags.png',
                                                 color: Colors.grey)),
                                   ),
                                 ],
@@ -335,9 +335,9 @@ class _addbagsState extends State<addbags> {
                                     height: 21,
                                     width: 21,
                                     child: _selectedfree == true
-                                        ? Image.asset('assets/freeadd.png',
+                                        ? Image.asset('assets/old_images/freeadd.png',
                                             color: Colors.blue.shade900)
-                                        : Image.asset('assets/freeadd.png',
+                                        : Image.asset('assets/old_images/freeadd.png',
                                             color: Colors.grey)),
                               ),
                             ),
@@ -407,9 +407,9 @@ class _addbagsState extends State<addbags> {
                                       height: 21,
                                       width: 21,
                                       child: _selectedpremium == true
-                                          ? Image.asset('assets/dollaradd.png',
+                                          ? Image.asset('assets/old_images/dollaradd.png',
                                               color: Colors.blue.shade900)
-                                          : Image.asset('assets/dollaradd.png',
+                                          : Image.asset('assets/old_images/dollaradd.png',
                                               color: Colors.grey)),
                                 ),
                               ),

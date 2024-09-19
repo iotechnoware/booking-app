@@ -1,23 +1,24 @@
 import 'dart:io';
 
-import 'package:gofly/homepage1.dart';
+import 'package:gofly/old_file/homepage1.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: camel_case_types
-class editprofile extends StatefulWidget {
-  const editprofile({Key? key}) : super(key: key);
+class EditProfileView extends StatefulWidget {
+  const EditProfileView({Key? key}) : super(key: key);
 
   @override
-  State<editprofile> createState() => _editprofileState();
+  State<EditProfileView> createState() => _EditProfileViewState();
 }
 
 // ignore: camel_case_types
-class _editprofileState extends State<editprofile> {
+class _EditProfileViewState extends State<EditProfileView> {
   final firstname = TextEditingController();
   final middlename = TextEditingController();
   final lastname = TextEditingController();
@@ -56,11 +57,11 @@ class _editprofileState extends State<editprofile> {
     'Afghanistan',
     'South Africa',
     'Dubai'
-    'Paris'
-    'Ireland'
-    'Sri Lanka'
-    'Australia'
-    'Singapore'
+        'Paris'
+        'Ireland'
+        'Sri Lanka'
+        'Australia'
+        'Singapore'
   ];
 
   String? selectedValue;
@@ -102,7 +103,7 @@ class _editprofileState extends State<editprofile> {
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const home1(),
+                  builder: (BuildContext context) => const HomePageView(),
                 ),
               );
             },
@@ -126,7 +127,7 @@ class _editprofileState extends State<editprofile> {
                     onPressed: () {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const home1(),
+                          builder: (BuildContext context) => const HomePageView(),
                         ),
                       );
                     },
@@ -189,7 +190,7 @@ class _editprofileState extends State<editprofile> {
                         color: Colors.grey,
                         image: const DecorationImage(
                             image: AssetImage(
-                              "assets/editprofile.png",
+                              "assets/old_images/editprofile.png",
                             ),
                             scale: 0.1),
                         borderRadius: BorderRadius.circular(100),
@@ -208,7 +209,7 @@ class _editprofileState extends State<editprofile> {
                             color: const Color(0xff1F75EC),
                             image: const DecorationImage(
                                 image: AssetImage(
-                                  "assets/Cameraeditprofile.png",
+                                  "assets/old_images/Cameraeditprofile.png",
                                 ),
                                 scale: 20),
                             borderRadius: BorderRadius.circular(100),
@@ -372,11 +373,11 @@ class _editprofileState extends State<editprofile> {
                         // ignore: avoid_print
                         print(selectedDate);
                         String formattedDate =
-                            DateFormat.yMd().format(selectedDate);
+                        DateFormat.yMd().format(selectedDate);
                         // ignore: avoid_print
                         print(formattedDate);
                         setState(
-                          () {
+                              () {
                             date_of_birth.text = formattedDate;
                           },
                         );
@@ -393,14 +394,14 @@ class _editprofileState extends State<editprofile> {
                         ),
                       ),
                       suffixIcon:
-                          Image.asset("assets/calendar07.png", scale: 3.5),
+                      Image.asset("assets/old_images/calendar07.png", scale: 3.5),
                       hintText: 'DATE OF BIRTH',
                       hintStyle: TextStyle(
                           fontFamily: "gilroy", color: notifire.getdarkscolor),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide:
-                            const BorderSide(color: Colors.black, width: 5.0),
+                        const BorderSide(color: Colors.black, width: 5.0),
                       ),
                     ),
                   ),

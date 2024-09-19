@@ -86,7 +86,7 @@ class _selectflightState extends State<selectflight> {
             margin: const EdgeInsets.only(right: 12),
             alignment: Alignment.center,
             child: IconButton(
-              icon: Image.asset('assets/settingsselect.png',scale:2,),
+              icon: Image.asset('assets/old_images/settingsselect.png',scale:2,),
              // iconSize: 24,
               color: Colors.black,
               onPressed: () {
@@ -129,7 +129,7 @@ class _selectflightState extends State<selectflight> {
                       SizedBox(
                         height: 35,
                         width: 112,
-                        child: Image.asset('assets/selectflight.png'),
+                        child: Image.asset('assets/old_images/selectflight.png'),
                       ),
                       const Text(
                         '1h 30 Min',
@@ -222,7 +222,7 @@ class _selectflightState extends State<selectflight> {
                                               borderRadius:
                                                   BorderRadius.circular(100)),
                                           child: Image.asset(
-                                              'assets/emirates.png'),
+                                              'assets/old_images/emirates.png'),
                                         ),
                                         const SizedBox(
                                           width: 9,

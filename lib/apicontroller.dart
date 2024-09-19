@@ -1,8 +1,9 @@
 import 'dart:convert';
 
 import 'package:gofly/apiwrapper.dart';
-import 'package:gofly/bottomnavigationbar.dart';
+import 'package:gofly/old_file/bottomnavigationbar.dart';
 import 'package:get/get.dart';
+import 'package:gofly/ui/views/main_view/main_view.dart';
 import 'package:http/http.dart' as http;
 
 class ApiServices extends GetxController {
@@ -13,7 +14,7 @@ class ApiServices extends GetxController {
           if ((val['ResponseCode'] == "200") && (val['Result'] == "true")) {
            // Data.fromJson(val["UserLogin"]);
             //log(val.toString() name: "name ==>");
-            Get.to(() => const BottomNav(), duration: Duration.zero);
+            Get.to(() => const MainView(), duration: Duration.zero);
             ApiServices.showToastMessage(val["ResponseMsg"]);
           } else {
             ApiServices.showToastMessage(val["ResponseMsg"]);

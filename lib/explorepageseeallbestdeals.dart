@@ -2,10 +2,11 @@ import 'dart:ui';
 
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'homepage1.dart';
+import 'old_file/homepage1.dart';
 
 // ignore: camel_case_types
 class explorepageseeallbestdeals extends StatefulWidget {
@@ -69,7 +70,7 @@ class _explorepageseeallbestdealsState extends State<explorepageseeallbestdeals>
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const home1(),
+                  builder: (BuildContext context) => const HomePageView(),
                 ),
               );
             },
@@ -94,7 +95,7 @@ class _explorepageseeallbestdealsState extends State<explorepageseeallbestdeals>
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const home1(),
+                          const HomePageView(),
                         ),
                       );
                     },
@@ -182,7 +183,7 @@ class _explorepageseeallbestdealsState extends State<explorepageseeallbestdeals>
                                     color:
                                     Colors.grey.shade200.withOpacity(0.4),
                                     image: const DecorationImage(
-                                      image: AssetImage("assets/Heart.png"),
+                                      image: AssetImage("assets/old_images/Heart.png"),
                                       scale: 32,
                                     ),
                                   ),
@@ -245,7 +246,7 @@ class _explorepageseeallbestdealsState extends State<explorepageseeallbestdeals>
                                     Row(
                                       children: [
                                         Image.asset(
-                                            "assets/Locationexplore.png",
+                                            "assets/old_images/Locationexplore.png",
                                             scale: 24),
                                         const SizedBox(
                                           width: 6,

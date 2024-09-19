@@ -6,10 +6,11 @@ import 'package:gofly/searchflightroundtrip.dart';
 import 'package:gofly/selectflightfilterandshort.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'homepage1.dart';
+import 'old_file/homepage1.dart';
 
 class searchflight extends StatefulWidget {
   const searchflight({Key? key}) : super(key: key);
@@ -75,7 +76,7 @@ class _searchflightState extends State<searchflight>
                         Navigator.of(context).pop(
                           MaterialPageRoute(
                             builder: (BuildContext context) =>
-                            const home1(),
+                            const HomePageView(),
                           ),
                         );
                       },
@@ -101,7 +102,7 @@ class _searchflightState extends State<searchflight>
                 width: 40,
                 alignment: Alignment.center,
                 child: IconButton(
-                  icon: Image.asset('assets/settingsselect.png'),
+                  icon: Image.asset('assets/old_images/settingsselect.png'),
                   iconSize: 20,
                   color: Colors.black,
                   onPressed: () {

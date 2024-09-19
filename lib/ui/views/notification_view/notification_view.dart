@@ -1,38 +1,39 @@
-import 'package:gofly/homepage1.dart';
+import 'package:gofly/old_file/homepage1.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: camel_case_types
-class notification extends StatefulWidget {
-  const notification({Key? key}) : super(key: key);
+class NotificationView extends StatefulWidget {
+  const NotificationView({Key? key}) : super(key: key);
 
   @override
-  State<notification> createState() => _notificationState();
+  State<NotificationView> createState() => _NotificationViewState();
 }
 
 // ignore: camel_case_types
-class _notificationState extends State<notification> {
+class _NotificationViewState extends State<NotificationView> {
   List<List1> image = [
     List1(
-        image: "assets/palmjumirah.png",
+        image: "assets/old_images/palmjumirah.png",
         name: "Package From London",
         name2: "Start from \$45.00"),
     List1(
-        image: "assets/palmjumirah.png", name: "New trip", name2: "Let’s travel with family"),
+        image: "assets/old_images/palmjumirah.png", name: "New trip", name2: "Let’s travel with family"),
     List1(
-        image: "assets/palmjumirah.png",
+        image: "assets/old_images/palmjumirah.png",
         name: "Package From London",
         name2: "Start from \$45.00"),
     List1(
-        image: "assets/palmjumirah.png", name: "New trip", name2: "Let’s travel with family"),
+        image: "assets/old_images/palmjumirah.png", name: "New trip", name2: "Let’s travel with family"),
     List1(
-        image: "assets/palmjumirah.png",
+        image: "assets/old_images/palmjumirah.png",
         name: "Package From London",
         name2: "Start from \$45.00"),
     List1(
-        image: "assets/palmjumirah.png", name: "New trip", name2: "Let’s travel with family"),
+        image: "assets/old_images/palmjumirah.png", name: "New trip", name2: "Let’s travel with family"),
   ];
   late ColorNotifire notifire;
 
@@ -60,7 +61,7 @@ class _notificationState extends State<notification> {
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const home1(),
+                  builder: (BuildContext context) => const HomePageView(),
                 ),
               );
             },
@@ -85,7 +86,7 @@ class _notificationState extends State<notification> {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const home1(),
+                          const HomePageView(),
                         ),
                       );
                     },
@@ -103,7 +104,7 @@ class _notificationState extends State<notification> {
             margin: const EdgeInsets.only(right: 12),
             alignment: Alignment.center,
             child: IconButton(
-              icon: Image.asset('assets/notificationsettings.png'),
+              icon: Image.asset('assets/old_images/notificationsettings.png'),
               iconSize: 16,
               color: Colors.black,
               onPressed: () {
@@ -152,10 +153,10 @@ class _notificationState extends State<notification> {
               padding: const EdgeInsets.only(right:12,left: 12),
               child: Container(
                 width: double.infinity,
-               // height: 120,
+                // height: 120,
                 //padding: EdgeInsets.symmetric(vertical: 24),
                 decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                BoxDecoration(borderRadius: BorderRadius.circular(20)),
                 child: ListView.builder(
                   shrinkWrap: true,
                   physics: const ClampingScrollPhysics(),
@@ -204,9 +205,9 @@ class _notificationState extends State<notification> {
                                           decoration: BoxDecoration(
                                             color: Colors.white,
                                             image: DecorationImage(
-                                              image: AssetImage("${image[index].image}"),
-                                              scale: 1,
-                                              fit: BoxFit.cover
+                                                image: AssetImage("${image[index].image}"),
+                                                scale: 1,
+                                                fit: BoxFit.cover
                                             ),
                                             borderRadius: BorderRadius.circular(14),
                                           ),

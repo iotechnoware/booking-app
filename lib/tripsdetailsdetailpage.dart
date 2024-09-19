@@ -1,12 +1,14 @@
 // ignore_for_file: camel_case_types, sort_child_properties_last
 
 import 'package:gofly/theme/theme_manager.dart';
-import 'package:gofly/tripspagenaviggationbar.dart';
+import 'package:gofly/old_file/tripspagenaviggationbar.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
+import 'package:gofly/ui/views/main_view/trips_view/trips_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'homepage1.dart';
+import 'old_file/homepage1.dart';
 
 class tripsdetailpage extends StatefulWidget {
   const tripsdetailpage({Key? key}) : super(key: key);
@@ -45,7 +47,7 @@ class _tripsdetailpageState extends State<tripsdetailpage> {
               Navigator.of(context).pop(
                 MaterialPageRoute(
                   builder: (BuildContext context) =>
-                      const tripspageofnavigationbar(),
+                      const TripsView(),
                 ),
               );
             },
@@ -68,7 +70,7 @@ class _tripsdetailpageState extends State<tripsdetailpage> {
                     onPressed: () {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const home1(),
+                          builder: (BuildContext context) => const HomePageView(),
                         ),
                       );
                     },
@@ -111,7 +113,7 @@ class _tripsdetailpageState extends State<tripsdetailpage> {
                         SizedBox(
                             height: 35,
                             width: 112,
-                            child: Image.asset('assets/selectflight.png')),
+                            child: Image.asset('assets/old_images/selectflight.png')),
                         const Text(
                           '1h 30 Min',
                           style: TextStyle(
@@ -342,7 +344,7 @@ class _tripsdetailpageState extends State<tripsdetailpage> {
                                 height: 14,
                                 width: 14,
                                 child: Image.asset(
-                                    'assets/clarity_briefcase-line.png'),
+                                    'assets/old_images/clarity_briefcase-line.png'),
                               ),
                               const SizedBox(width: 8),
                               const Text(
@@ -375,7 +377,7 @@ class _tripsdetailpageState extends State<tripsdetailpage> {
                               SizedBox(
                                 height: 14,
                                 width: 14,
-                                child: Image.asset('assets/suitcase.png'),
+                                child: Image.asset('assets/old_images/suitcase.png'),
                               ),
                               const SizedBox(width: 8),
                               const Text(

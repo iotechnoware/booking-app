@@ -1,9 +1,10 @@
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'homepage1.dart';
+import 'old_file/homepage1.dart';
 
 // ignore: camel_case_types
 class homepageseealldealsbymonth extends StatefulWidget {
@@ -94,7 +95,7 @@ class _homepageseealldealsbymonthState
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const home1(),
+                  builder: (BuildContext context) => const HomePageView(),
                 ),
               );
             },
@@ -119,7 +120,7 @@ class _homepageseealldealsbymonthState
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const home1(),
+                          const HomePageView(),
                         ),
                       );
                     },

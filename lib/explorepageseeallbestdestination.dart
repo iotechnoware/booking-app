@@ -1,6 +1,7 @@
-import 'package:gofly/homepage1.dart';
+import 'package:gofly/old_file/homepage1.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -79,7 +80,7 @@ class _explorepageseeallbestdestinationState extends State<explorepageseeallbest
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const home1(),
+                  builder: (BuildContext context) => const HomePageView(),
                 ),
               );
             },
@@ -104,7 +105,7 @@ class _explorepageseeallbestdestinationState extends State<explorepageseeallbest
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const home1(),
+                          const HomePageView(),
                         ),
                       );
                     },

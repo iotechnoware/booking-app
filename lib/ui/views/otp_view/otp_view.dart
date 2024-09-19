@@ -1,25 +1,24 @@
 import 'dart:async';
-
-import 'package:gofly/forgetpasswordscreen.dart';
-
+import 'package:gofly/old_file/bottomnavigationbar.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gofly/ui/views/forget_password_view/forget_password_view.dart';
+import 'package:gofly/ui/views/main_view/main_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'bottomnavigationbar.dart';
 
 // ignore: camel_case_types
-class otp extends StatefulWidget {
-  const otp({Key? key}) : super(key: key);
+class OtpView extends StatefulWidget {
+  const OtpView({Key? key}) : super(key: key);
 
   @override
-  State<otp> createState() => _otpState();
+  State<OtpView> createState() => _OtpViewState();
 }
 
 // ignore: camel_case_types
-class _otpState extends State<otp> {
+class _OtpViewState extends State<OtpView> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -41,7 +40,7 @@ class _otpState extends State<otp> {
     const oneSec = Duration(seconds: 1);
     _timer = Timer.periodic(
       oneSec,
-      (Timer timer) {
+          (Timer timer) {
         if (_start == 0) {
           setState(() {
             timer.cancel();
@@ -89,7 +88,7 @@ class _otpState extends State<otp> {
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const forgetpassword(),
+                  builder: (BuildContext context) => const ForgetPasswordView(),
                 ),
               );
             },
@@ -118,7 +117,7 @@ class _otpState extends State<otp> {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              const forgetpassword(),
+                          const ForgetPasswordView(),
                         ),
                       );
                     },
@@ -380,7 +379,7 @@ class _otpState extends State<otp> {
             const SizedBox(height: 21),
             Row(
               children: [
-                 Text(
+                Text(
                   'Resend:',
                   style: TextStyle(
                       color:notifire.greytextColor,
@@ -417,7 +416,7 @@ class _otpState extends State<otp> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const BottomNav(),
+                      builder: (BuildContext context) => const MainView(),
                     ),
                   );
                 },

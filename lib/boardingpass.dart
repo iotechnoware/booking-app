@@ -105,7 +105,7 @@ class _baordingpasspageState extends State<baordingpasspage> {
                       SizedBox(
                           height: 35,
                           width: 112,
-                          child: Image.asset('assets/selectflight.png')),
+                          child: Image.asset('assets/old_images/selectflight.png')),
                       const Text(
                         '1h 30 Min',
                         style: TextStyle(
@@ -180,7 +180,7 @@ class _baordingpasspageState extends State<baordingpasspage> {
                                       height: 75,
                                       width: 75,
                                       child: Image.asset(
-                                        "assets/Emirates_Airlines 2.png",
+                                        "assets/old_images/Emirates_Airlines 2.png",
                                       ),
                                     ),
                                     const SizedBox(height: 10),
@@ -219,7 +219,7 @@ class _baordingpasspageState extends State<baordingpasspage> {
                                       topRight: Radius.circular(16),
                                     ),
                                     child: Image.asset(
-                                      'assets/boardingpassmap.png',
+                                      'assets/old_images/boardingpassmap.png',
                                       color:notifire.mapofboardingpass,
                                       scale: 1,
                                     ),

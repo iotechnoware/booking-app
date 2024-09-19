@@ -1,8 +1,7 @@
-import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gofly/splashscreen.dart';
 import 'package:gofly/theme/theme_manager.dart';
+import 'package:gofly/ui/views/splach_screen/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatefulWidget {
@@ -24,7 +23,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         home: const Scaffold(
           backgroundColor: Colors.black,
-          body: splashscreen(),
+          body: SplashScreen(),
         ),
       ),
     );

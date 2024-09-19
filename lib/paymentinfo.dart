@@ -190,7 +190,7 @@ class _paymentinfopageState extends State<paymentinfopage> {
                             child: SizedBox(
                               height: 16,
                               width: 24,
-                              child: Image.asset("assets/creditdebit1.png"),
+                              child: Image.asset("assets/old_images/creditdebit1.png"),
                             ),
                           ),
                           contentPadding: EdgeInsets.zero,
@@ -263,7 +263,7 @@ class _paymentinfopageState extends State<paymentinfopage> {
                           child: SizedBox(
                             height: 19,
                             width: 17,
-                            child: Image.asset("assets/logos_paypal.png"),
+                            child: Image.asset("assets/old_images/logos_paypal.png"),
                           ),
                         ),
                         contentPadding: EdgeInsets.zero,
@@ -331,7 +331,7 @@ class _paymentinfopageState extends State<paymentinfopage> {
                           child: SizedBox(
                             height: 22,
                             width: 21,
-                            child: Image.asset("assets/ia.png",color: notifire.apple),
+                            child: Image.asset("assets/old_images/ia.png",color: notifire.apple),
                           ),
                         ),
                         contentPadding: EdgeInsets.zero,
@@ -393,7 +393,7 @@ class _paymentinfopageState extends State<paymentinfopage> {
                           child: SizedBox(
                             height: 20,
                             width: 20,
-                            child: Image.asset("assets/g.png"),
+                            child: Image.asset("assets/old_images/g.png"),
                           ),
                         ),
                         contentPadding: EdgeInsets.zero,
@@ -466,7 +466,7 @@ class _paymentinfopageState extends State<paymentinfopage> {
                           child: SizedBox(
                             height: 22,
                             width: 24,
-                            child: Image.asset("assets/citybank.png"),
+                            child: Image.asset("assets/old_images/citybank.png"),
                           ),
                         ),
                         contentPadding: EdgeInsets.zero,

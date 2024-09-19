@@ -2,23 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gofly/ui/shared/colors.dart';
 
-class PasswordVisibilityController extends GetxController {
-  RxBool hidePassword = true.obs;
-
-  void togglePasswordVisibility() {
-    hidePassword.value = !hidePassword.value;
-  }
-}
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({Key? key, required this.hitText, this.borderColor, this.textColor, this.backColor, this.labelText, required this.controller, this.keyboardType, this.validator, required this.isPassword,}) : super(key: key);
+  const CustomTextField({Key? key, required this.hitText, this.borderColor, this.textColor, this.backColor, this.labelText, required this.controller, this.keyboardType, this.validator, this.iconImage,}) : super(key: key);
 
   final String hitText;
   final Color? borderColor;
   final Color? textColor;
-  final bool isPassword;
   final Color? backColor;
   final String? labelText;
+  final String? iconImage;
   final TextInputType? keyboardType;
   final TextEditingController controller;
   final String? Function(String?)? validator;
@@ -31,40 +24,32 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
 
-    bool hidePassword = true;
 
     return Padding(
-      padding: const EdgeInsetsDirectional.symmetric(vertical: 1 ,horizontal: 18),
-      child: TextFormField(
-        validator: widget.validator,
-        // textInputAction: TextInputAction.next,
-        // autofocus: true,
-        keyboardType: widget.keyboardType,
+      padding: const EdgeInsets.only(top: 5 , bottom: 5),
+      child: TextField(
         controller: widget.controller,
+        style: const TextStyle(color: Colors.black,fontFamily: "gilroy"),
+        keyboardType: TextInputType.emailAddress,
+        textInputAction: TextInputAction.next,
         decoration: InputDecoration(
-          suffixIcon: widget.isPassword ? IconButton(
-            onPressed: ()
-            {
-              setState(() {hidePassword =! hidePassword;});
-            },
-            icon: Icon(hidePassword ? Icons.visibility_off : Icons.visibility , color: AppColors.mainBlueColor,),
-          ) : const SizedBox.shrink(),
-          // errorStyle: TextStyle(color: AppColors.mainOrangeColor),
-          filled: true,
-          fillColor: widget.backColor ?? AppColors.textFieldColor,
-          hintText: widget.hitText,
-          contentPadding: const EdgeInsetsDirectional.symmetric(vertical: 25 ,horizontal: 30),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-            borderSide: BorderSide(color: widget.borderColor ?? AppColors.transparentColor)
+              borderRadius: BorderRadius.circular(12)
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-            borderSide: BorderSide(color: widget.borderColor ?? AppColors.transparentColor),
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(
+              color: Colors.grey,
+            ),
           ),
-
+          hintStyle: const TextStyle(color: Colors.black,fontFamily: "gilroy"),
+          fillColor: Colors.white,
+          hintText: widget.hitText,
+          labelText: widget.labelText,
+          labelStyle:const TextStyle(color: Colors.black,fontFamily: "gilroy"),
+          prefixIcon:
+          Image.asset("assets/old_images/${widget.iconImage}.png", scale: 24,color: Colors.black,),
         ),
-        style: TextStyle(color: widget.textColor ?? Colors.black45),
       ),
     );
   }

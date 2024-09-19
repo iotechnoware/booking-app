@@ -190,7 +190,7 @@ class _multicityState extends State<multicity> with SingleTickerProviderStateMix
                       child: InkWell(
                           borderRadius: BorderRadius.circular(50.0),
                           onTap: () {},
-                          child: Image.asset('assets/Group 615.png')),
+                          child: Image.asset('assets/old_images/Group 615.png')),
                     ),
                   ),
                 ),
@@ -259,7 +259,7 @@ class _multicityState extends State<multicity> with SingleTickerProviderStateMix
                     ),
                   ),
                   suffixIcon:
-                  Image.asset("assets/calendar07.png", scale: 3.5),
+                  Image.asset("assets/old_images/calendar07.png", scale: 3.5),
                   hintText: 'DATE OF BIRTH',
                   hintStyle: TextStyle(
                       fontFamily: "gilroy", color: notifire.getdarkscolor),
@@ -364,7 +364,7 @@ class _multicityState extends State<multicity> with SingleTickerProviderStateMix
                             () {},
                       );
                     },
-                    icon: Image.asset("assets/people1.png",scale:3.5),
+                    icon: Image.asset("assets/old_images/people1.png",scale:3.5),
                   ),
                   labelText: "PASSENGERS",
                   labelStyle: TextStyle(
@@ -472,7 +472,7 @@ class _multicityState extends State<multicity> with SingleTickerProviderStateMix
                             () {},
                       );
                     },
-                    icon: Image.asset("assets/chair.png",scale:3.5),
+                    icon: Image.asset("assets/old_images/chair.png",scale:3.5),
                   ),
                   labelText: "CLASS",
                   labelStyle: TextStyle(

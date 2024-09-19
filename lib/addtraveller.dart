@@ -268,7 +268,7 @@ class _addtravellerState extends State<addtraveller>
                     ),
                   ),
                   suffixIcon:
-                  Image.asset("assets/calendar07.png", scale: 3.5),
+                  Image.asset("assets/old_images/calendar07.png", scale: 3.5),
                   hintText: 'DATE OF BIRTH',
                   hintStyle: TextStyle(
                       fontFamily: "gilroy", color: notifire.getdarkscolor),

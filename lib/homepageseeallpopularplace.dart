@@ -1,8 +1,9 @@
 import 'dart:ui';
 
-import 'package:gofly/homepage1.dart';
+import 'package:gofly/old_file/homepage1.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -73,7 +74,7 @@ class _homepageseeallpopularplaceState
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const home1(),
+                  builder: (BuildContext context) => const HomePageView(),
                 ),
               );
             },
@@ -97,7 +98,7 @@ class _homepageseeallpopularplaceState
                     onPressed: () {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const home1(),
+                          builder: (BuildContext context) => const HomePageView(),
                         ),
                       );
                     },
@@ -188,7 +189,7 @@ class _homepageseeallpopularplaceState
                                     color:
                                         Colors.grey.shade200.withOpacity(0.4),
                                     image: const DecorationImage(
-                                      image: AssetImage("assets/Heart.png"),
+                                      image: AssetImage("assets/old_images/Heart.png"),
                                       scale: 32,
                                     ),
                                   ),
@@ -251,7 +252,7 @@ class _homepageseeallpopularplaceState
                                     Row(
                                       children: [
                                         Image.asset(
-                                            "assets/Locationexplore.png",
+                                            "assets/old_images/Locationexplore.png",
                                             scale: 24),
                                         const SizedBox(
                                           width: 6,

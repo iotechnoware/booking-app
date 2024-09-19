@@ -507,7 +507,7 @@ class _filtertimedepartureState extends State<filtertimedeparture> {
                                             height: 24,
                                             width: 24,
                                             child:
-                                            Image.asset('assets/sunrise.png',color:notifire.filterandshortmainColor),
+                                            Image.asset('assets/old_images/sunrise.png',color:notifire.filterandshortmainColor),
                                           ),
                                            Text(
                                             'Morning',
@@ -589,7 +589,7 @@ class _filtertimedepartureState extends State<filtertimedeparture> {
                                           SizedBox(
                                             height: 24,
                                             width: 24,
-                                            child: Image.asset('assets/sun.png',color: notifire.filterandshortmainColor,),
+                                            child: Image.asset('assets/old_images/sun.png',color: notifire.filterandshortmainColor,),
                                           ),
                                            Text(
                                             'Noon',
@@ -682,7 +682,7 @@ class _filtertimedepartureState extends State<filtertimedeparture> {
 
                                                 Padding(
                                                   padding: const EdgeInsets.only(top:1),
-                                                  child: Image.asset("assets/moon.png",color:notifire.filterandshortmainColor,scale: 4,),
+                                                  child: Image.asset("assets/old_images/moon.png",color:notifire.filterandshortmainColor,scale: 4,),
                                                 ),
                                                 const SizedBox(height: 6),
                                                  Text(
@@ -815,7 +815,7 @@ class _filtertimedepartureState extends State<filtertimedeparture> {
                                             height: 24,
                                             width: 24,
                                             child:
-                                                Image.asset('assets/sunrise.png',color:notifire.filterandshortmainColor),
+                                                Image.asset('assets/old_images/sunrise.png',color:notifire.filterandshortmainColor),
                                           ),
                                            Text(
                                             'Morning',
@@ -897,7 +897,7 @@ class _filtertimedepartureState extends State<filtertimedeparture> {
                                           SizedBox(
                                             height: 24,
                                             width: 24,
-                                            child: Image.asset('assets/sun.png',color:notifire.filterandshortmainColor),
+                                            child: Image.asset('assets/old_images/sun.png',color:notifire.filterandshortmainColor),
                                           ),
                                           Text(
                                             'Noon',
@@ -988,7 +988,7 @@ class _filtertimedepartureState extends State<filtertimedeparture> {
                                           children: [
                                             Padding(
                                               padding: const EdgeInsets.only(top:1),
-                                              child: Image.asset("assets/moon.png",color:notifire.filterandshortmainColor,scale: 4,),
+                                              child: Image.asset("assets/old_images/moon.png",color:notifire.filterandshortmainColor,scale: 4,),
                                             ),
                                             const SizedBox(height: 6),
                                             Text(

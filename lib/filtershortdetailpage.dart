@@ -168,7 +168,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                       SizedBox(
                           height: 35,
                           width: 112,
-                          child: Image.asset('assets/flightdetail.png')),
+                          child: Image.asset('assets/old_images/flightdetail.png')),
                       const Text(
                         '1h 30 Min',
                         style: TextStyle(
@@ -253,7 +253,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                             height: 44,
                             width: 44,
                             child:
-                                Image.asset('assets/Emirates_Airlines 2.png'),
+                                Image.asset('assets/old_images/Emirates_Airlines 2.png'),
                           ),
                         ),
                       ],
@@ -299,7 +299,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                                 child: SizedBox(
                                   height: 24,
                                   width: 24,
-                                  child: Image.asset('assets/planedivider.png'),
+                                  child: Image.asset('assets/old_images/planedivider.png'),
                                 ),
                               ),
                             ),
@@ -313,7 +313,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                                   height: 11,
                                   width: 11,
                                   child:
-                                      Image.asset('assets/detailsreturn.png'),
+                                      Image.asset('assets/old_images/detailsreturn.png'),
                                 ),
                                 const SizedBox(
                                   width: 10,
@@ -488,7 +488,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                     leading: SizedBox(
                       height: 18,
                       width: 20,
-                      child: Image.asset('assets/Bag 2.png'),
+                      child: Image.asset('assets/old_images/Bag 2.png'),
                     ),
                     title: const Text(
                       "Cabin bag",
@@ -513,7 +513,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                     leading: SizedBox(
                       height: 18,
                       width: 20,
-                      child: Image.asset('assets/Location.png'),
+                      child: Image.asset('assets/old_images/Location.png'),
                     ),
                     title: const Text(
                       "Check in",
@@ -538,7 +538,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                     leading: SizedBox(
                       height: 18,
                       width: 20,
-                      child: Image.asset('assets/cancle.png'),
+                      child: Image.asset('assets/old_images/cancle.png'),
                     ),
                     title: const Text(
                       "Cancellation",
@@ -563,7 +563,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                     leading: SizedBox(
                       height: 18,
                       width: 20,
-                      child: Image.asset('assets/Calendardetailselect.png'),
+                      child: Image.asset('assets/old_images/Calendardetailselect.png'),
                     ),
                     title: const Text(
                       "Date change",

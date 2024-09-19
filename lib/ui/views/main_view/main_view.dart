@@ -28,38 +28,36 @@ class _MainViewState extends State<MainView> {
   Widget build(BuildContext context) {
 
 
-    return SafeArea(
-      child: Scaffold(
-        key: key,
-        resizeToAvoidBottomInset: false,
-        body: Stack(
-          children: [
-            PageView(
-              physics: const NeverScrollableScrollPhysics(),
-              controller: controller,
-              children: const [
-                HomePageView(),
-                ExploreView(),
-                TripsView(),
-              ],
-            ),
+    return Scaffold(
+      key: key,
+      resizeToAvoidBottomInset: false,
+      body: Stack(
+        children: [
+          PageView(
+            physics: const NeverScrollableScrollPhysics(),
+            controller: controller,
+            children: const [
+              HomePageView(),
+              ExploreView(),
+              TripsView(),
+            ],
+          ),
 
-            Align(
-              alignment: AlignmentDirectional.bottomCenter,
-              child: BottomNavigationWidget(
-                bottomNavigation: select,
-                onTap: (selected , pageNumber ) {
-                  // key.currentState!.openDrawer();
-                  setState(() {
-                    select = selected;
-                  }
-                  );
-                  controller.jumpToPage(pageNumber);
-                },
-              ),
+          Align(
+            alignment: AlignmentDirectional.bottomCenter,
+            child: BottomNavigationWidget(
+              bottomNavigation: select,
+              onTap: (selected , pageNumber ) {
+                // key.currentState!.openDrawer();
+                setState(() {
+                  select = selected;
+                }
+                );
+                controller.jumpToPage(pageNumber);
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

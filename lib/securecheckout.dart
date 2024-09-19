@@ -177,7 +177,7 @@ class _checkoutpageState extends State<checkoutpage> {
                         SizedBox(
                             height: 35,
                             width: 112,
-                            child: Image.asset('assets/selectflight.png')),
+                            child: Image.asset('assets/old_images/selectflight.png')),
                         const Text(
                           '1h 30 Min',
                           style: TextStyle(
@@ -406,7 +406,7 @@ class _checkoutpageState extends State<checkoutpage> {
                                 height: 14,
                                 width: 14,
                                 child: Image.asset(
-                                    'assets/clarity_briefcase-line.png'),
+                                    'assets/old_images/clarity_briefcase-line.png'),
                               ),
                               const SizedBox(width: 8),
                               const Text(
@@ -438,7 +438,7 @@ class _checkoutpageState extends State<checkoutpage> {
                               SizedBox(
                                 height: 14,
                                 width: 14,
-                                child: Image.asset('assets/suitcase.png'),
+                                child: Image.asset('assets/old_images/suitcase.png'),
                               ),
                               const SizedBox(width: 8),
                               const Text(
@@ -473,7 +473,7 @@ class _checkoutpageState extends State<checkoutpage> {
                     SizedBox(
                       height: 20,
                       width: 20,
-                      child: Image.asset('assets/checkoutbreakdown.png'),
+                      child: Image.asset('assets/old_images/checkoutbreakdown.png'),
                     ),
                     TextButton(
                       style: ButtonStyle(
@@ -507,7 +507,7 @@ class _checkoutpageState extends State<checkoutpage> {
                     SizedBox(
                       height: 20,
                       width: 20,
-                      child: Image.asset('assets/planecheckout.png'),
+                      child: Image.asset('assets/old_images/planecheckout.png'),
                     ),
                     TextButton(
                       style: ButtonStyle(

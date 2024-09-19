@@ -1,9 +1,10 @@
 import 'dart:ui';
 import 'package:gofly/explorepagenearbyhotel.dart';
-import 'package:gofly/explorepageofnavigationbar.dart';
+import 'package:gofly/old_file/explorepageofnavigationbar.dart';
 import 'package:gofly/explorepagetopdeals.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/explore_view/explore_view.dart';
 import 'package:provider/provider.dart';
 import 'package:readmore/readmore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -106,7 +107,7 @@ class _bestDealsState extends State<bestDeals> {
                     Navigator.of(context).pop(
                       MaterialPageRoute(
                         builder: (BuildContext context) =>
-                        const explorepageofnavigationbar(),
+                        const ExploreView(),
                       ),
                     );
                   },
@@ -118,7 +119,7 @@ class _bestDealsState extends State<bestDeals> {
                       borderRadius: BorderRadius.circular(16),
                       color:Colors.grey.shade200.withOpacity(0.4),
                       image: const DecorationImage(
-                        image: AssetImage("assets/backwhite.png"),
+                        image: AssetImage("assets/old_images/backwhite.png"),
                         scale: 32,
                       ),
                     ),
@@ -137,7 +138,7 @@ class _bestDealsState extends State<bestDeals> {
                     borderRadius: BorderRadius.circular(16),
                     color: Colors.grey.shade200.withOpacity(0.4),
                     image: const DecorationImage(
-                      image: AssetImage("assets/Heart.png"),
+                      image: AssetImage("assets/old_images/Heart.png"),
                       scale: 26,
                     ),
                   ),
@@ -172,7 +173,7 @@ class _bestDealsState extends State<bestDeals> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(24),
                           child: Image.asset(
-                            "assets/dubaipalm.jpg",
+                            "assets/old_images/dubaipalm.jpg",
                             fit: BoxFit.fill,
                           ),
                         )),
@@ -205,7 +206,7 @@ class _bestDealsState extends State<bestDeals> {
                           const SizedBox(height: 6),
                           Row(
                             children: [
-                              Image.asset("assets/Locationexplore.png",
+                              Image.asset("assets/old_images/Locationexplore.png",
                                   scale: 28),
                               const Text(
                                 "Dubai, UAE",
@@ -305,7 +306,7 @@ class _bestDealsState extends State<bestDeals> {
                           const SizedBox(height: 7),
                           Row(
                             children: [
-                              Image.asset("assets/Group 3bestdealss.png",
+                              Image.asset("assets/old_images/Group 3bestdealss.png",
                                   scale: 38),
                               const SizedBox(width: 8),
                               Text(
@@ -334,7 +335,7 @@ class _bestDealsState extends State<bestDeals> {
                           const SizedBox(height: 7),
                           Row(
                             children: [
-                              Image.asset("assets/Send.png", scale: 38),
+                              Image.asset("assets/old_images/Send.png", scale: 38),
                               const SizedBox(width: 8),
                               Text(
                                 "567 KM",
@@ -483,7 +484,7 @@ class _bestDealsState extends State<bestDeals> {
                                           color: Colors.white.withOpacity(0.5),
                                           image: const DecorationImage(
                                             image: AssetImage(
-                                                "assets/Heart22explore.png"),
+                                                "assets/old_images/Heart22explore.png"),
                                             scale: 32,
                                           ),
                                         ),
@@ -533,7 +534,7 @@ class _bestDealsState extends State<bestDeals> {
                                           Row(
                                             children: [
                                               Image.asset(
-                                                  "assets/Locationexplore.png",
+                                                  "assets/old_images/Locationexplore.png",
                                                   scale: 28),
                                               const Text(
                                                 "Lambok, USA",

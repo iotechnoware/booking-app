@@ -203,7 +203,7 @@ class _filterandshortmainState extends State<filterandshortmain> {
                               child: SizedBox(
                                 height: 20,
                                 width: 21,
-                                child: Image.asset('assets/stops.png',
+                                child: Image.asset('assets/old_images/stops.png',
                                     color: notifire.filterandshortmainColor),
                               ),
                             ),
@@ -267,7 +267,7 @@ class _filterandshortmainState extends State<filterandshortmain> {
                                 height: 20,
                                 width: 21,
                                 child: Image.asset(
-                                  'assets/Time Circle.png',
+                                  'assets/old_images/Time Circle.png',
                                   color: notifire.filterandshortmainColor,
                                 ),
                               ),
@@ -331,7 +331,7 @@ class _filterandshortmainState extends State<filterandshortmain> {
                               child: SizedBox(
                                 height: 20,
                                 width: 21,
-                                child: Image.asset('assets/airline.png',
+                                child: Image.asset('assets/old_images/airline.png',
                                     color: notifire.filterandshortmainColor),
                               ),
                             ),
@@ -395,7 +395,7 @@ class _filterandshortmainState extends State<filterandshortmain> {
                                 height: 20,
                                 width: 21,
                                 child: Image.asset(
-                                  'assets/buggage.png',
+                                  'assets/old_images/buggage.png',
                                   color: notifire.filterandshortmainColor,
                                 ),
                               ),

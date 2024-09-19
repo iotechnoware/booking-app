@@ -1,8 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/explore_view/explore_view.dart';
 
-import 'explorepageofnavigationbar.dart';
+import 'old_file/explorepageofnavigationbar.dart';
 
 // ignore: camel_case_types
 class bestdeals2 extends StatefulWidget {
@@ -44,7 +45,7 @@ class _bestdeals2State extends State<bestdeals2> {
                                 Navigator.of(context).pop(
                                   MaterialPageRoute(
                                     builder: (BuildContext context) =>
-                                    const explorepageofnavigationbar(),
+                                    const ExploreView(),
                                   ),
                                 );
                               },

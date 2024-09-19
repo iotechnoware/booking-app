@@ -1,12 +1,15 @@
 import 'package:get/get.dart';
 import 'package:gofly/apiwrapper.dart';
-import 'package:gofly/bottomnavigationbar.dart';
+import 'package:gofly/old_file/bottomnavigationbar.dart';
 
-import 'package:gofly/forgetpasswordscreen.dart';
+import 'package:gofly/old_file/forgetpasswordscreen.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:gofly/ui/shared/colors.dart';
 import 'package:gofly/ui/shared/utils.dart';
+import 'package:gofly/ui/views/forget_password_view/forget_password_view.dart';
+import 'package:gofly/ui/views/main_view/main_view.dart';
+import 'package:gofly/ui/views/sign_up_view/sign_up_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -191,7 +194,7 @@ class _SignInViewState extends State<SignInView> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (BuildContext context) =>
-                              const forgetpassword(),
+                              const ForgetPasswordView(),
                             ),
                           );
                         },
@@ -223,7 +226,7 @@ class _SignInViewState extends State<SignInView> {
                         apiwrapper.userlogin(body);
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (BuildContext context) => const BottomNav(),
+                            builder: (BuildContext context) => const MainView(),
                           ),
                         );
                       },
@@ -310,7 +313,7 @@ class _SignInViewState extends State<SignInView> {
                           child: const Text("don't have account"),
                         ),
                         InkWell(
-                          onTap: (){  },
+                          onTap: (){ Get.to(const SignUpView()); },
                           child: Padding(
                             padding: EdgeInsetsDirectional.only(start: screenWidth(50)),
                             child: Text('register',

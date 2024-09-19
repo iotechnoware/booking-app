@@ -1,10 +1,11 @@
 
 import 'package:gofly/boardingpass.dart';
-import 'package:gofly/bottomnavigationbar.dart';
+import 'package:gofly/old_file/bottomnavigationbar.dart';
 import 'package:gofly/planeinfo.dart';
 import 'package:gofly/pricebreakdownpage.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/main_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -49,7 +50,7 @@ class _confirmpageState extends State<confirmpage> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const BottomNav(),
+                  builder: (BuildContext context) => const MainView(),
                 ),
               );
             },
@@ -65,8 +66,8 @@ class _confirmpageState extends State<confirmpage> {
               Stack(
                 children: [
                   Image.asset(
-                      'assets/kisspng-confetti-desktop-wallpaper-clip-art-confetti-5abb217f930b39 1.png'),
-                  Image.asset('assets/confirmillustrationofflight.png'),
+                      'assets/old_images/kisspng-confetti-desktop-wallpaper-clip-art-confetti-5abb217f930b39 1.png'),
+                  Image.asset('assets/old_images/confirmillustrationofflight.png'),
                 ],
               ),
               const SizedBox(
@@ -217,7 +218,7 @@ class _confirmpageState extends State<confirmpage> {
                                                       const EdgeInsets.only(
                                                           bottom: 35),
                                                   child: Image.asset(
-                                                    'assets/confirmationpageplane.png',
+                                                    'assets/old_images/confirmationpageplane.png',
                                                     scale: 23,
                                                   ),
                                                 ),
@@ -323,7 +324,7 @@ class _confirmpageState extends State<confirmpage> {
                         SizedBox(
                           height: 20,
                           width: 20,
-                          child: Image.asset('assets/checkoutbreakdown.png'),
+                          child: Image.asset('assets/old_images/checkoutbreakdown.png'),
                         ),
                         TextButton(
                           style: ButtonStyle(
@@ -351,7 +352,7 @@ class _confirmpageState extends State<confirmpage> {
                         SizedBox(
                           height: 20,
                           width: 20,
-                          child: Image.asset('assets/boardingpassiconfirm.png'),
+                          child: Image.asset('assets/old_images/boardingpassiconfirm.png'),
                         ),
                         TextButton(
                           style: ButtonStyle(
@@ -379,7 +380,7 @@ class _confirmpageState extends State<confirmpage> {
                         SizedBox(
                           height: 20,
                           width: 20,
-                          child: Image.asset('assets/planecheckout.png'),
+                          child: Image.asset('assets/old_images/planecheckout.png'),
                         ),
                         TextButton(
                           style: ButtonStyle(

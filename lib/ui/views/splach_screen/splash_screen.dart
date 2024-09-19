@@ -1,21 +1,20 @@
 // ignore_for_file: camel_case_types
 
 import 'dart:async';
-
-import 'package:gofly/onboardingscreen.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/on_boarding_view/on_boarding_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class splashscreen extends StatefulWidget {
-  const splashscreen({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  State<splashscreen> createState() => _splashscreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _splashscreenState extends State<splashscreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -37,7 +36,7 @@ class _splashscreenState extends State<splashscreen> {
       const Duration(seconds: 3),
           () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (BuildContext context) => const onboarding(),
+          builder: (BuildContext context) => const OnBoardingView(),
         ),
       ),
     ).cancel();
@@ -55,9 +54,9 @@ class _splashscreenState extends State<splashscreen> {
   Widget build(BuildContext context) {
     Timer(
       const Duration(seconds: 3),
-      () => Navigator.of(context).pushReplacement(
+          () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (BuildContext context) => const onboarding(),
+          builder: (BuildContext context) => const OnBoardingView(),
         ),
       ),
     );
@@ -84,11 +83,11 @@ class _splashscreenState extends State<splashscreen> {
             child: Text(
               "GoFly",
               style: TextStyle(
-                fontFamily: 'Gilroy',
-                fontWeight: FontWeight.w600,
-                fontSize: 30,
-                letterSpacing: 3,
-                color: Color(0xffFFFFFF)
+                  fontFamily: 'Gilroy',
+                  fontWeight: FontWeight.w600,
+                  fontSize: 30,
+                  letterSpacing: 3,
+                  color: Color(0xffFFFFFF)
               ),
             ),
           ),

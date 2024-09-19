@@ -5,15 +5,15 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: camel_case_types
-class onboarding extends StatefulWidget {
-  const onboarding({Key? key}) : super(key: key);
+class OnBoardingView extends StatefulWidget {
+  const OnBoardingView({Key? key}) : super(key: key);
 
   @override
-  State<onboarding> createState() => _onboardingState();
+  State<OnBoardingView> createState() => _OnBoardingViewState();
 }
 
 // ignore: camel_case_types
-class _onboardingState extends State<onboarding> {
+class _OnBoardingViewState extends State<OnBoardingView> {
   late ColorNotifire notifire;
   getdarkmodepreviousstate() async {
     final prefs = await SharedPreferences.getInstance();
@@ -83,7 +83,7 @@ class _onboardingState extends State<onboarding> {
                     // ignore: sort_child_properties_last
                     child: const Text('GET STARTED',softWrap: true,
                         style:
-                            TextStyle(fontWeight: FontWeight.w600, fontSize: 16,fontFamily: 'Gilroy')),
+                        TextStyle(fontWeight: FontWeight.w600, fontSize: 16,fontFamily: 'Gilroy')),
                     backgroundColor: Colors.blueAccent.shade400,
                     onPressed: () {
                       Navigator.push(

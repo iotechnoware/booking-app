@@ -182,7 +182,7 @@ class _selectseatsState extends State<selectseats> {
                       SizedBox(
                           height: 35,
                           width: 112,
-                          child: Image.asset('assets/selectflight.png')),
+                          child: Image.asset('assets/old_images/selectflight.png')),
                       const Text(
                         '1h 30 Min',
                         style: TextStyle(
@@ -241,7 +241,7 @@ class _selectseatsState extends State<selectseats> {
                       SizedBox(
                         height: 51,
                         width: 51,
-                        child: Image.asset('assets/Emirates_Airlines 2.png'),
+                        child: Image.asset('assets/old_images/Emirates_Airlines 2.png'),
                       ),
                       const SizedBox(
                         height: 7,

@@ -174,7 +174,7 @@ class _planeinfoState extends State<planeinfo> {
                       SizedBox(
                           height: 35,
                           width: 112,
-                          child: Image.asset('assets/selectflight.png'),),
+                          child: Image.asset('assets/old_images/selectflight.png'),),
                       const Text(
                         '1h 30 Min',
                         style: TextStyle(
@@ -254,7 +254,7 @@ class _planeinfoState extends State<planeinfo> {
                           height: 214,
                           width: 193,
                           child: Image.asset(
-                              'assets/planeinfocard-removebg-preview.png'),
+                              'assets/old_images/planeinfocard-removebg-preview.png'),
                         ),
                         const SizedBox(
                           height: 10,

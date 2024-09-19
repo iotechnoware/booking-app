@@ -1,21 +1,22 @@
-import 'package:gofly/otpverificationscreen.dart';
-import 'package:gofly/signinpage.dart';
+import 'package:gofly/old_file/otpverificationscreen.dart';
+import 'package:gofly/old_file/signinpage.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/otp_view/otp_view.dart';
 import 'package:gofly/ui/views/sign_in_view/sign_in_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: camel_case_types
-class forgetpassword extends StatefulWidget {
-  const forgetpassword({Key? key}) : super(key: key);
+class ForgetPasswordView extends StatefulWidget {
+  const ForgetPasswordView({Key? key}) : super(key: key);
 
   @override
-  State<forgetpassword> createState() => _forgetpasswordState();
+  State<ForgetPasswordView> createState() => _ForgetPasswordViewState();
 }
 
 // ignore: camel_case_types
-class _forgetpasswordState extends State<forgetpassword> {
+class _ForgetPasswordViewState extends State<ForgetPasswordView> {
   late ColorNotifire notifire;
 
   getdarkmodepreviousstate() async {
@@ -194,7 +195,7 @@ class _forgetpasswordState extends State<forgetpassword> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const otp(),
+                      builder: (BuildContext context) => const OtpView(),
                     ),
                   );
                 },

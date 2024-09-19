@@ -118,7 +118,7 @@ class _paymethodpageState extends State<paymethodpage> {
               margin: const EdgeInsets.only(top: 124),
               height: 161,
               width: 220,
-              child: Image.asset('assets/creditcard.png'),
+              child: Image.asset('assets/old_images/creditcard.png'),
             ),
           ),
           const SizedBox(height: 71),

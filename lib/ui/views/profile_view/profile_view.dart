@@ -1,25 +1,26 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:gofly/editprofile.dart';
-import 'package:gofly/homepage1.dart';
+import 'package:gofly/old_file/editprofile.dart';
 import 'package:gofly/switchoftheme.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/edit_profile_view/edit_profile_view.dart';
+import 'package:gofly/ui/views/main_view/home_page_view/home_page_view.dart';
 //import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: camel_case_types
-class profilemain extends StatefulWidget {
-  const profilemain({Key? key}) : super(key: key);
+class ProfileView extends StatefulWidget {
+  const ProfileView({Key? key}) : super(key: key);
 
   @override
-  State<profilemain> createState() => _profilemainState();
+  State<ProfileView> createState() => _ProfileViewState();
 }
 
 // ignore: camel_case_types
-class _profilemainState extends State<profilemain> {
+class _ProfileViewState extends State<ProfileView> {
   late ColorNotifire notifire;
 
   getdarkmodepreviousstate() async {
@@ -71,7 +72,7 @@ class _profilemainState extends State<profilemain> {
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const home1(),
+                  builder: (BuildContext context) => const HomePageView(),
                 ),
               );
             },
@@ -95,7 +96,7 @@ class _profilemainState extends State<profilemain> {
                     onPressed: () {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
-                          builder: (BuildContext context) => const home1(),
+                          builder: (BuildContext context) => const HomePageView(),
                         ),
                       );
                     },
@@ -324,7 +325,7 @@ class _profilemainState extends State<profilemain> {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            const editprofile(),
+                                        const EditProfileView(),
                                       ),
                                     );
                                   },
@@ -495,7 +496,7 @@ class _profilemainState extends State<profilemain> {
                   border: Border.all(color: Colors.white, width: 2),
                   image: const DecorationImage(
                       image: AssetImage(
-                        "assets/editprofile.png",
+                        "assets/old_images/editprofile.png",
                       ),
                       scale: 0.1),
                   borderRadius: BorderRadius.circular(100),

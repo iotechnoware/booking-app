@@ -1,7 +1,8 @@
 import 'package:gofly/confirmation.dart';
-import 'package:gofly/explorepageofnavigationbar.dart';
+import 'package:gofly/old_file/explorepageofnavigationbar.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/main_view/explore_view/explore_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -44,7 +45,7 @@ class _topdealsState extends State<topdeals> {
               Navigator.of(context).pop(
                 MaterialPageRoute(
                   builder: (BuildContext context) =>
-                      const explorepageofnavigationbar(),
+                      const ExploreView(),
                 ),
               );
             },
@@ -69,7 +70,7 @@ class _topdealsState extends State<topdeals> {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const explorepageofnavigationbar(),
+                          const ExploreView(),
                         ),
                       );
                     },
@@ -257,7 +258,7 @@ class _topdealsState extends State<topdeals> {
                             ),
                             Row(
                               children: [
-                                 Image.asset("assets/returnexxplore.png",scale: 40),
+                                 Image.asset("assets/old_images/returnexxplore.png",scale: 40),
                                 const SizedBox(width:6),
                                 const Text(
                                   "Non-stop",
@@ -408,7 +409,7 @@ class _topdealsState extends State<topdeals> {
                             ),
                             Row(
                               children: [
-                                Image.asset("assets/returnexxplore.png",scale: 40),
+                                Image.asset("assets/old_images/returnexxplore.png",scale: 40),
                                 const SizedBox(width:6),
                                 const Text(
                                   "Non-stop",
@@ -586,7 +587,7 @@ class _topdealsState extends State<topdeals> {
                                 ),
                                 Row(
                                   children: [
-                                    Image.asset("assets/returnexxplore.png",scale: 40),
+                                    Image.asset("assets/old_images/returnexxplore.png",scale: 40),
                                     const SizedBox(width:6),
                                     const Text(
                                       "Non-stop",
@@ -737,7 +738,7 @@ class _topdealsState extends State<topdeals> {
                                 ),
                                 Row(
                                   children: [
-                                    Image.asset("assets/returnexxplore.png",scale: 40),
+                                    Image.asset("assets/old_images/returnexxplore.png",scale: 40),
                                     const SizedBox(width:6),
                                     const Text(
                                       "Non-stop",
@@ -917,7 +918,7 @@ class _topdealsState extends State<topdeals> {
                                 ),
                                 Row(
                                   children: [
-                                    Image.asset("assets/returnexxplore.png",scale: 40),
+                                    Image.asset("assets/old_images/returnexxplore.png",scale: 40),
                                     const SizedBox(width:6),
                                     const Text(
                                       "Non-stop",
@@ -1068,7 +1069,7 @@ class _topdealsState extends State<topdeals> {
                                 ),
                                 Row(
                                   children: [
-                                    Image.asset("assets/returnexxplore.png",scale: 40),
+                                    Image.asset("assets/old_images/returnexxplore.png",scale: 40),
                                     const SizedBox(width:6),
                                     const Text(
                                       "Non-stop",

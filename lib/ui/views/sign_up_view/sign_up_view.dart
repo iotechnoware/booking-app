@@ -8,15 +8,15 @@ import 'package:gofly/apicontroller.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class signup extends StatefulWidget {
-  const signup({Key? key}) : super(key: key);
+class SignUpView extends StatefulWidget {
+  const SignUpView({Key? key}) : super(key: key);
 
   @override
-  State<signup> createState() => _signupState();
+  State<SignUpView> createState() => _SignUpViewState();
 }
 
 // ignore: camel_case_types
-class _signupState extends State<signup> {
+class _SignUpViewState extends State<SignUpView> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController fullname = TextEditingController();
@@ -48,7 +48,7 @@ class _signupState extends State<signup> {
       body: Form(
         key: _formKey,
         child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 20, right: 20 , top: 20),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -56,28 +56,7 @@ class _signupState extends State<signup> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(
-                  height: 18,
-                ),
-                RichText(
-                  text:  TextSpan(
-                    text: 'Hello,',
-                    style: TextStyle(
-                        fontSize: 30,
-                        color: notifire.getdarkscolor,
-                        fontFamily: 'Gilroy'),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'There',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30,
-                              color: notifire.getdarkscolor,
-                              fontFamily: 'Gilroy')),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
+                  height: 25,
                 ),
                 Text(
                   "Enter your information below to get\nstarted your trips",
@@ -116,18 +95,18 @@ class _signupState extends State<signup> {
                             color:notifire.getgreycolor,
                           ),
                         ),
-                      // decoration: InputDecoration(
-                      //   hintText: 'percy jackson',
-                      //   labelText: "FULL NAME",
-                      //   border: OutlineInputBorder(
-                      //     borderRadius: BorderRadius.circular(10),
-                      //     borderSide: const BorderSide(
-                      //       color: Colors.red,
-                      //       width: 5.0,
-                      //     ),
-                      //   ),
-                      // ),
-                    ),
+                        // decoration: InputDecoration(
+                        //   hintText: 'percy jackson',
+                        //   labelText: "FULL NAME",
+                        //   border: OutlineInputBorder(
+                        //     borderRadius: BorderRadius.circular(10),
+                        //     borderSide: const BorderSide(
+                        //       color: Colors.red,
+                        //       width: 5.0,
+                        //     ),
+                        //   ),
+                        // ),
+                      ),
                     ),
                     const SizedBox(
                       height: 30,
@@ -260,7 +239,7 @@ class _signupState extends State<signup> {
                 const SizedBox(
                   height: 25,
                 ),
-                 Center(
+                Center(
                   child: Text(
                     "Or",
                     style: TextStyle(fontFamily: 'Gilroy',color: notifire.greytextColor),
@@ -285,7 +264,7 @@ class _signupState extends State<signup> {
                           child: Container(
                               height: 33,
                               width: 33,
-                              child: Image.asset('assets/g.png')),
+                              child: Image.asset('assets/old_images/g.png')),
                           backgroundColor: notifire.notificationbackground1,
                           splashColor: null,
                           onPressed: () {},
@@ -303,7 +282,7 @@ class _signupState extends State<signup> {
                           child: Container(
                               height: 33,
                               width: 33,
-                              child: Image.asset('assets/Facebookloogin.png')),
+                              child: Image.asset('assets/old_images/Facebookloogin.png')),
                           backgroundColor: notifire.notificationbackground1,
                           onPressed: () {},
                         ),
@@ -319,7 +298,7 @@ class _signupState extends State<signup> {
                           child: Container(
                               height: 33,
                               width: 33,
-                              child: Image.asset('assets/ia.png',color: notifire.apple,)),
+                              child: Image.asset('assets/old_images/ia.png',color: notifire.apple,)),
                           backgroundColor: notifire.notificationbackground1,
                           onPressed: () {},
                         ),
