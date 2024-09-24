@@ -1,5 +1,6 @@
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/shared/utils.dart';
 import 'package:gofly/ui/views/sign_in_view/sign_in_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -24,6 +25,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       notifire.setIsDark = previusstate;
     }
   }
+
+
   @override
   Widget build(BuildContext context) {
     notifire = Provider.of<ColorNotifire>(context, listen: true);
@@ -86,6 +89,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                         TextStyle(fontWeight: FontWeight.w600, fontSize: 16,fontFamily: 'Gilroy')),
                     backgroundColor: Colors.blueAccent.shade400,
                     onPressed: () {
+                      storage.setFirstLunch(false);
                       Navigator.push(
                         context,
                         MaterialPageRoute(

@@ -3,7 +3,9 @@
 import 'dart:async';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/shared/utils.dart';
 import 'package:gofly/ui/views/on_boarding_view/on_boarding_view.dart';
+import 'package:gofly/ui/views/sign_in_view/sign_in_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -56,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
       const Duration(seconds: 3),
           () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (BuildContext context) => const OnBoardingView(),
+          builder: (BuildContext context) => storage.getFirstLunch() ? const OnBoardingView() : const SignInView(),
         ),
       ),
     );

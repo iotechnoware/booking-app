@@ -10,9 +10,9 @@ class CommonResponse<T>{
       if (statusCode == 200) {
         this.data = json['response'];
       } else {
-        if ( json['response'] != null && json['response'] is Map && json['response']['title'] != null )
+        if ( json['response'] != null && json['response'] is Map && json['response']['error'] != null )
         {
-          this.message = json['response']['title'];
+          this.message = json['response']['error'];
         }
         else {
           switch (statusCode)

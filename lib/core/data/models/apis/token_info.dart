@@ -1,15 +1,15 @@
 class TokenInfo {
-  String? token;
+  String? accessToken;
 
-  TokenInfo({this.token});
+  TokenInfo({this.accessToken});
 
   TokenInfo.fromJson(Map<String, dynamic> json) {
-    token = json['token'];
+    accessToken = json['access_token'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['token'] = this.token;
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['access_token'] = this.accessToken;
     return data;
   }
 }

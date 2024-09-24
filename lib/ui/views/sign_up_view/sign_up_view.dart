@@ -1,7 +1,9 @@
 // ignore_for_file: sort_child_properties_last
 
+import 'package:get/get.dart';
 import 'package:gofly/apiwrapper.dart';
 import 'package:gofly/theme/theme_manager.dart';
+import 'package:gofly/ui/views/sign_up_view/sign_up_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:gofly/apicontroller.dart';
@@ -17,16 +19,8 @@ class SignUpView extends StatefulWidget {
 
 // ignore: camel_case_types
 class _SignUpViewState extends State<SignUpView> {
-  TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
-  TextEditingController fullname = TextEditingController();
   bool _isVisible = false;
 
-  @override
-  void initState() {
-    userlogin();
-    super.initState();
-  }
 
   final _formKey = GlobalKey<FormState>();
   late ColorNotifire notifire;
@@ -39,6 +33,10 @@ class _SignUpViewState extends State<SignUpView> {
       notifire.setIsDark = previusstate;
     }
   }
+
+
+  SignUpController controller = Get.put(SignUpController());
+
   @override
   Widget build(BuildContext context) {
     notifire = Provider.of<ColorNotifire>(context, listen: true);
@@ -70,13 +68,55 @@ class _SignUpViewState extends State<SignUpView> {
                 ),
                 Column(
                   children: [
+
                     TextFormField(
-                      controller: fullname,
+                      controller: controller.firstnameController,
                       textInputAction: TextInputAction.next,
                       style: TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Please enter your Name';
+                        }
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
+                        fillColor: Colors.white,
+                        hintText: 'Enter Your first name',
+                        labelText: "FULL NAME",
+                        labelStyle:TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12)
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide(
+                            color:notifire.getgreycolor,
+                          ),
+                        ),
+                        // decoration: InputDecoration(
+                        //   hintText: 'percy jackson',
+                        //   labelText: "FULL NAME",
+                        //   border: OutlineInputBorder(
+                        //     borderRadius: BorderRadius.circular(10),
+                        //     borderSide: const BorderSide(
+                        //       color: Colors.red,
+                        //       width: 5.0,
+                        //     ),
+                        //   ),
+                        // ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    TextFormField(
+                      controller: controller.lastnameController,
+                      textInputAction: TextInputAction.next,
+                      style: TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter last Name';
                         }
                         return null;
                       },
@@ -112,7 +152,7 @@ class _SignUpViewState extends State<SignUpView> {
                       height: 30,
                     ),
                     TextFormField(
-                      controller: email,
+                      controller: controller.emailController,
                       style: TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
@@ -159,7 +199,7 @@ class _SignUpViewState extends State<SignUpView> {
                       height: 30,
                     ),
                     TextFormField(
-                      controller: password,
+                      controller: controller.passwordController,
                       obscureText: _isVisible,
                       textInputAction: TextInputAction.next,
                       style: TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
@@ -223,16 +263,8 @@ class _SignUpViewState extends State<SignUpView> {
                             fontFamily: 'Gilroy')),
                     backgroundColor: Colors.blueAccent.shade400,
                     autofocus: true,
-                    onPressed: () async {
-                      var body = {
-                        "name": fullname.text,
-                        "email": email.text,
-                        "password": password.text,
-                        "mobile": "7041494098",
-                        "ccode": "+91",
-                        "refercode": ""
-                      };
-                      apiwrapper.datapost(body);
+                    onPressed: () {
+                      controller.signup();
                     },
                   ),
                 ),

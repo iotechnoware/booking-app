@@ -13,4 +13,6 @@ class AppColors
   static Color mainTextColor2 = const Color.fromRGBO(124, 125, 126, 1);
   static Color mainTextColor1 = const Color.fromRGBO(74, 75, 77, 1);
   static Color blackColor = const Color.fromRGBO(0, 0, 0, 1.0);
+  static const Color darkGreyColor = Color.fromRGBO(70, 69, 71, 1);
+  static const Color maingrey = Color.fromRGBO(242, 242, 242, 1);
 }

@@ -8,7 +8,7 @@ import 'package:path/path.dart' as path;
 import 'package:http_parser/http_parser.dart';
 
 class NetworkUtil {
-  static String baseUrl = 'fakestoreapi.com';
+  static String baseUrl = 'booking.iotechnoware.com';
   static var client = http.Client();
 
   static Future<dynamic> sendRequest({
@@ -19,7 +19,7 @@ class NetworkUtil {
     Map<String, dynamic>? body,
   }) async {
     try {
-      var uri = Uri.https(baseUrl, url, params);
+      var uri = Uri.http(baseUrl, url, params);
       late http.Response response;
 
       Map<String, dynamic> jsonResponse = {};

@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gofly/theme/theme_manager.dart';
@@ -17,6 +18,8 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (_) => ColorNotifire())],
       child:  GetMaterialApp(
+        builder: BotToastInit(), //1. call BotToastInit
+        navigatorObservers: [BotToastNavigatorObserver()],
         theme: ThemeData(
           useMaterial3: false,
         ),

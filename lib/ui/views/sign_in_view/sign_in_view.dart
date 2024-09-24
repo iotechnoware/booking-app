@@ -9,6 +9,7 @@ import 'package:gofly/ui/shared/colors.dart';
 import 'package:gofly/ui/shared/utils.dart';
 import 'package:gofly/ui/views/forget_password_view/forget_password_view.dart';
 import 'package:gofly/ui/views/main_view/main_view.dart';
+import 'package:gofly/ui/views/sign_in_view/sign_in_controller.dart';
 import 'package:gofly/ui/views/sign_up_view/sign_up_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,8 +26,7 @@ class SignInView extends StatefulWidget {
 
 // ignore: camel_case_types
 class _SignInViewState extends State<SignInView> {
-  final email = TextEditingController();
-  final password = TextEditingController();
+
   bool value = false;
   bool _isVisible = false;
 
@@ -53,6 +53,8 @@ class _SignInViewState extends State<SignInView> {
       notifire.setIsDark = previusstate;
     }
   }
+
+  SignInController controller = SignInController();
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +88,7 @@ class _SignInViewState extends State<SignInView> {
                   Column(
                     children: [
                       TextField(
-                        controller: email,
+                        controller: controller.emailController,
                         style: TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
@@ -112,7 +114,7 @@ class _SignInViewState extends State<SignInView> {
                       ),
                       TextField(
                         style: TextStyle(color: notifire.getdarkscolor,fontFamily: "gilroy"),
-                        controller: password,
+                        controller: controller.passwordController,
                         obscureText: _isVisible,
                         textInputAction: TextInputAction.next,
                         decoration: InputDecoration(
@@ -218,17 +220,7 @@ class _SignInViewState extends State<SignInView> {
                               fontFamily: 'Gilroy')),
                       backgroundColor: Colors.blueAccent.shade400,
                       onPressed: () {
-
-                        var body = {
-                          "email": email.text,
-                          "password": password.text,
-                        };
-                        apiwrapper.userlogin(body);
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => const MainView(),
-                          ),
-                        );
+                        controller.signIn();
                       },
                     ),
                   ),
