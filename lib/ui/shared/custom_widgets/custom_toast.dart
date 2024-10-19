@@ -69,6 +69,7 @@ class CustomToast {
                   height: screenWidth(15),
                 ),
                 CustomText(
+                  fontSize: 10,
                   text: message,
                   textColor: AppColors.blackColor,
                   textType: TextStyleType.BODY,

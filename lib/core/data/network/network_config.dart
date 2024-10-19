@@ -4,10 +4,16 @@ import 'package:gofly/ui/shared/utils.dart';
 
 class NetworkConfig {
   static String BASE_API = '/api/';
+  static String FLIGHT_API = '/';
 
   static String getFullApiUrl(String api) {
     return BASE_API + api;
   }
+
+  static String customGetFullApiUrl(String api) {
+    return FLIGHT_API + api;
+  }
+
 
   static Map<String, String> getHeaders(
       {bool? needAuth = true,
@@ -21,4 +27,19 @@ class NetworkConfig {
       ...extraHeaders!
     };
   }
+
+  static Map<String, String> customGetHeaders(
+      {bool? needAuth = true,
+        RequestType? type = RequestType.POST,
+        Map<String, String>? extraHeaders = const {}}) {
+    return {
+      if (needAuth!)
+        'Authorization':
+        'Bearer ${storage.getRefreshToken()?.accessToken ?? ''}',
+      if (type != RequestType.GET) 'Content-Type': 'application/json',
+      ...extraHeaders!
+    };
+  }
+
+
 }

@@ -6,4 +6,6 @@ enum OperationType {
   JEWELERY,
   MEN,
   WOMAN,
+  PRICING,
+  ORDER,
 }

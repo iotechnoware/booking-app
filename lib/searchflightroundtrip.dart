@@ -1,10 +1,11 @@
 import 'package:gofly/roundtripcabinclassview.dart';
 import 'package:gofly/roundtrippassengerview.dart';
 import 'package:gofly/searchflightroundtripssearchbar.dart';
-import 'package:gofly/selectflight.dart';
+import 'package:gofly/old_file/selectflight.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:gofly/ui/views/search_flight_view/flight_info_page.dart';
 
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -137,7 +138,7 @@ class _roundtripState extends State<roundtrip>
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const selectflight(),
+                  builder: (BuildContext context) => const FlightInfoPage(),
                 ),
               );
             },

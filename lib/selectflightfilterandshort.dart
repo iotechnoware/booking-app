@@ -1,10 +1,10 @@
 import 'package:gofly/filterairlinespage.dart';
 import 'package:gofly/filterdeparturetime.dart';
 import 'package:gofly/filterstops.dart';
-import 'package:gofly/searchflight.dart';
-import 'package:gofly/selectflight.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/search_flight_view/flight_info_page.dart';
+import 'package:gofly/ui/views/search_flight_view/search_flight_view.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -75,7 +75,7 @@ class _filterandshortmainState extends State<filterandshortmain> {
             onTap: () {
               Navigator.of(context).pop(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const selectflight(),
+                  builder: (BuildContext context) => const FlightInfoPage(),
                 ),
               );
             },
@@ -100,7 +100,7 @@ class _filterandshortmainState extends State<filterandshortmain> {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              const searchflight(),
+                              const SearchFlightView(),
                         ),
                       );
                     },

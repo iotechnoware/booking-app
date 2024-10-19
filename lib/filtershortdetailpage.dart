@@ -1,7 +1,8 @@
 import 'package:gofly/addtraveller.dart';
-import 'package:gofly/selectflight.dart';
+import 'package:gofly/old_file/selectflight.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/search_flight_view/flight_info_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -44,12 +45,12 @@ class _filtershortdetailState extends State<filtershortdetail> {
           padding: const EdgeInsets.only(left: 12),
           child: GestureDetector(
             onTap: () {
-              Navigator.of(context).pop(
-                MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                  const selectflight(),
-                ),
-              );
+              // Navigator.of(context).pop(
+              //   MaterialPageRoute(
+              //     builder: (BuildContext context) =>
+              //     const FlightInfoPage(),
+              //   ),
+              // );
             },
             child:Padding(
               padding: const EdgeInsets.only(bottom: 4, top: 8),
@@ -72,7 +73,7 @@ class _filtershortdetailState extends State<filtershortdetail> {
                       Navigator.of(context).pop(
                         MaterialPageRoute(
                           builder: (BuildContext context) =>
-                          const selectflight(),
+                          const FlightInfoPage(),
                         ),
                       );
                     },

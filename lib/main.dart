@@ -1,6 +1,8 @@
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:gofly/app/my_app.dart';
 import 'package:gofly/core/data/repositories/shared_preferences_repositories.dart';
+import 'package:gofly/firebase_options.dart';
 import 'package:gofly/old_file/splashscreen.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +18,11 @@ Future<void> main() async {
     var sharedPref = await SharedPreferences.getInstance();
     return sharedPref;
   },
+  );
+
+  await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+      // name: ''
   );
 
   Get.put(SharedPreferencesRepositories());

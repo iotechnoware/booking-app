@@ -1,7 +1,11 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gofly/old_file/selectflight.dart';
 import 'package:gofly/theme/theme_manager.dart';
+import 'package:gofly/ui/views/result_view.dart';
+import 'package:gofly/ui/views/search_flight_view/flight_info_page.dart';
+import 'package:gofly/old_file/search_flight_view.dart';
 import 'package:gofly/ui/views/splach_screen/splash_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -26,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         home: const Scaffold(
           backgroundColor: Colors.black,
-          body: SplashScreen(),
+          body:  SplashScreen() //FlightInfoPage() //,
         ),
       ),
     );

@@ -38,49 +38,49 @@ class CustomAppBar extends StatelessWidget implements PreferredSize{
                 ),
               ),
             ),
-            const Column(
-              children: [
-                Text("Location",style: TextStyle(
-                    fontFamily: "gilroy",
-                    fontSize: 12,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w400
-                ),),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.location_on_rounded,
-                      color: Color(0xff1F75EC),
-                    ),
-
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text(
-                      "London,",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 15,
-                          fontFamily: 'Gilroy'),
-                    ),
-                    Text(
-                      "UK",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          fontFamily: 'Gilroy'),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Icon(Icons.keyboard_arrow_down_outlined,
-                        color: Colors.blue),
-                  ],
-                ),
-              ],
-            ),
+            // const Column(
+            //   children: [
+            //     Text("Location",style: TextStyle(
+            //         fontFamily: "gilroy",
+            //         fontSize: 12,
+            //         color: Colors.black,
+            //         fontWeight: FontWeight.w400
+            //     ),),
+            //     Row(
+            //       children: [
+            //         Icon(
+            //           Icons.location_on_rounded,
+            //           color: Color(0xff1F75EC),
+            //         ),
+            //
+            //         SizedBox(
+            //           width: 5,
+            //         ),
+            //         Text(
+            //           "Dubai",
+            //           style: TextStyle(
+            //               color: Colors.black,
+            //               fontWeight: FontWeight.w600,
+            //               fontSize: 15,
+            //               fontFamily: 'Gilroy'),
+            //         ),
+            //         Text(
+            //           "",
+            //           style: TextStyle(
+            //               color: Colors.black,
+            //               fontWeight: FontWeight.w400,
+            //               fontSize: 15,
+            //               fontFamily: 'Gilroy'),
+            //         ),
+            //         SizedBox(
+            //           width: 5,
+            //         ),
+            //         Icon(Icons.keyboard_arrow_down_outlined,
+            //             color: Colors.blue),
+            //       ],
+            //     ),
+            //   ],
+            // ),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(

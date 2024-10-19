@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:gofly/apiwrapper.dart';
 import 'package:gofly/old_file/bottomnavigationbar.dart';
@@ -11,6 +12,7 @@ import 'package:gofly/ui/views/forget_password_view/forget_password_view.dart';
 import 'package:gofly/ui/views/main_view/main_view.dart';
 import 'package:gofly/ui/views/sign_in_view/sign_in_controller.dart';
 import 'package:gofly/ui/views/sign_up_view/sign_up_view.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -52,6 +54,26 @@ class _SignInViewState extends State<SignInView> {
     } else {
       notifire.setIsDark = previusstate;
     }
+  }
+
+
+  Future<UserCredential> signInWithGoogle() async {
+    final GoogleSignIn googleSignIn = GoogleSignIn();
+    googleSignIn.disconnect();
+    GoogleSignInAccount googleAccount = (await googleSignIn.signIn())!;
+    GoogleSignInAuthentication auth = await googleAccount.authentication;
+    final credential = GoogleAuthProvider.credential(
+        accessToken: auth.accessToken,
+        idToken: auth.idToken
+    );
+    controller.signIn(
+        email:googleAccount.email,
+        token: auth.idToken,
+        uniqueId:googleAccount.id,
+        // password: googleAccount.
+    );
+    return await FirebaseAuth.instance.signInWithCredential(credential);
+
   }
 
   SignInController controller = SignInController();
@@ -157,32 +179,6 @@ class _SignInViewState extends State<SignInView> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // ignore: avoid_unnecessary_containers
-                      Row(
-                        children: [
-                          Checkbox(
-                            side: const BorderSide(color:Colors.grey),
-                            shape: const RoundedRectangleBorder(
-                                borderRadius:
-                                BorderRadius.all(Radius.circular(5))),
-                            // ignore: unnecessary_this
-                            value: this.value,
-                            onChanged: (bool? value) {
-                              setState(() {
-                                this.value = value!;
-                              });
-                            },
-                          ),
-                          const Text(
-                            "RememberMe",
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 12,
-                                fontFamily: 'Gilroy'),
-                          ),
-                        ],
-                      ),
                       TextButton(
                         child:  Text(
                           "Forgetpassword?",
@@ -254,7 +250,10 @@ class _SignInViewState extends State<SignInView> {
                               child: Image.asset('assets/old_images/g.png'),),
                             backgroundColor:notifire.notificationbackground1,
                             splashColor: null,
-                            onPressed: () {},
+                            onPressed: () async {
+                              signInWithGoogle();
+
+                            },
                           ),
                         ),
                         SizedBox(
@@ -271,7 +270,11 @@ class _SignInViewState extends State<SignInView> {
                                 child:
                                 Image.asset('assets/old_images/Facebookloogin.png')),
                             backgroundColor: notifire.notificationbackground1,
-                            onPressed: () {},
+                            onPressed: () async {
+                              final GoogleSignIn googleSignIn = GoogleSignIn();
+                              googleSignIn.disconnect();
+                              await FirebaseAuth.instance.signOut();
+                            },
                           ),
                         ),
                         SizedBox(
@@ -324,6 +327,24 @@ class _SignInViewState extends State<SignInView> {
               ),
             ),
           ),
+
+          Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: InkWell(
+                  onTap: (){
+                    Get.to(const MainView());
+                    storage.setGuestLogin(true);
+                  },
+                  child: const Text(
+                    'Continue as Guest',
+                    style: TextStyle(fontSize: 16 , decoration: TextDecoration.underline),
+                  ),
+                ),
+              ),
+          ),
+
         ],
       ),
     );

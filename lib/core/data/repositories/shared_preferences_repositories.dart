@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:get/get.dart';
+import 'package:gofly/core/data/models/apis/refresh_token_model.dart';
 import 'package:gofly/core/data/models/apis/token_info.dart';
 import 'package:gofly/core/enums/data_type.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -13,9 +14,11 @@ class SharedPreferencesRepositories{
   String PREF_FIRST_LAUNCH = 'first_launch';
   String IS_LOGGED_IN = 'is_logged_in';
   String PREF_TOKEN_INFO = 'token_info';
+  String PREF_REFRESH_TOKEN_INFO = 'token_info';
   String PREF_APP_LANG = 'app_language';
   String PREF_CART_LIST = 'cart_list';
   String PREF_ORDER_PLACED = 'order_placed';
+  String PREF_GUEST_LOGIN = 'order_placed';
 
 
 // static String IS_SELECT_PIC = 'is_select_pic';
@@ -60,6 +63,25 @@ class SharedPreferencesRepositories{
     }
   }
 
+  setRefreshToken(RefreshTokenModel value) {
+    setPreference(
+      dataType: DataType.STRING,
+      key: PREF_REFRESH_TOKEN_INFO,
+      value: jsonEncode(value),
+    );
+  }
+
+  RefreshTokenModel? getRefreshToken() {
+    if (globalSharedPref.containsKey(PREF_REFRESH_TOKEN_INFO)) {
+      return RefreshTokenModel.fromJson(jsonDecode(getPreference(key: PREF_REFRESH_TOKEN_INFO)));
+    } else {
+      return null;
+    }
+  }
+
+
+
+
   // void setCartList(List<CartModel> list) {
   //   setPreference(
   //       dataType: DataType.STRING,
@@ -92,6 +114,21 @@ class SharedPreferencesRepositories{
   //   }
   // }
 
+  setGuestLogin(bool value) {
+    setPreference(
+      dataType: DataType.BOOL,
+      key: PREF_GUEST_LOGIN,
+      value: value,
+    );
+  }
+
+  bool getGuestLogin() {
+    if (globalSharedPref.containsKey(PREF_GUEST_LOGIN)) {
+      return getPreference(key: PREF_GUEST_LOGIN);
+    } else {
+      return false;
+    }
+  }
 
 
   setOrderPlaced(bool value) {

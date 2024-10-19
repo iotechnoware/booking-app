@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:gofly/ui/shared/colors.dart';
 
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({Key? key, required this.hitText, this.borderColor, this.textColor, this.backColor, this.labelText, required this.controller, this.keyboardType, this.validator, this.iconImage,}) : super(key: key);
+  const CustomTextField({Key? key, this.hitText, this.borderColor, this.textColor, this.backColor, this.labelText, required this.controller, this.keyboardType, this.validator, this.iconImage,}) : super(key: key);
 
-  final String hitText;
+  final String? hitText;
   final Color? borderColor;
   final Color? textColor;
   final Color? backColor;

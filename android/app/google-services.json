@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "125054942606",
+    "project_id": "dna-holidays",
+    "storage_bucket": "dna-holidays.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125054942606:android:49d2f8e372f39c36abb8df",
+        "android_client_info": {
+          "package_name": "com.goflyGoFly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125054942606-slrllqjpgo3vmn8pmbkttokt9n8l8att.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goflyGoFly",
+            "certificate_hash": "8802b0920a4e2088447e4bbf9f4b7bf1a154279b"
+          }
+        },
+        {
+          "client_id": "125054942606-idgorp7k67miqiovoncsuf5tu639onrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOoUX4MvN0uSkRmxBqOiPcY35Er5DeuRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125054942606-idgorp7k67miqiovoncsuf5tu639onrn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "125054942606-8vbgunpk9pv6r8ovjinjs4q6516vdo8v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gofly"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

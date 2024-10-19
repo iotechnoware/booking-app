@@ -1,8 +1,10 @@
 // ignore: duplicate_ignore
 // ignore_for_file: camel_case_types
 
-import 'package:gofly/searchflight.dart';
+import 'package:gofly/old_file/searchflight.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/search_flight_view/search_flight_view.dart';
+import 'package:gofly/old_file/search_flight_view.dart';
 
 
 class searchflightroundtrip extends StatefulWidget {
@@ -42,7 +44,7 @@ class _searchflightroundtripState extends State<searchflightroundtrip> {
                 onPressed: () {
                   Navigator.of(context).pop(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const searchflight(),
+                      builder: (BuildContext context) => const SearchFlightView(),
                     ),
                   );
                 },

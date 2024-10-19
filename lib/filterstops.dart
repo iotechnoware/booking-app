@@ -1,7 +1,8 @@
 import 'package:gofly/filtershortdetailpage.dart';
-import 'package:gofly/selectflight.dart';
+import 'package:gofly/old_file/selectflight.dart';
 import 'package:gofly/theme/theme_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:gofly/ui/views/search_flight_view/flight_info_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -47,7 +48,7 @@ class _stopfilterpageState extends State<stopfilterpage> {
               Navigator.of(context).pop(
                 MaterialPageRoute(
                   builder: (BuildContext context) =>
-                  const selectflight(),
+                  const FlightInfoPage(),
                 ),
               );
             },
@@ -108,11 +109,11 @@ class _stopfilterpageState extends State<stopfilterpage> {
             ),
             backgroundColor: const Color(0xff1F75EC),
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => const selectflight(),
-                ),
-              );
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(
+              //     builder: (BuildContext context) => const FlightInfoPage(),
+              //   ),
+              // );
             },
           ),
         ),

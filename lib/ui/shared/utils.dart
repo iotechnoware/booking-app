@@ -25,7 +25,7 @@ void customLoader() => BotToast.showCustomLoading(toastBuilder: (builder) {
     decoration: BoxDecoration(
         color: Colors.black.withOpacity(0.5),
         borderRadius: BorderRadius.circular(15)),
-    child: const SpinKitCircle(color: Colors.teal),
+    child: const SpinKitCircle(color: Colors.blue),
   );
 });
 
